@@ -14,7 +14,7 @@ public class MemberRegistrationApplication extends SpringBootServletInitializer
 	  }
 	  
 	  @Override protected SpringApplicationBuilder
-	  configure(SpringApplicationBuilder builder) { // TODO Auto-generated method
+	  configure(SpringApplicationBuilder builder) { 
 	  return builder.sources(MemberRegistrationApplication.class); }
 	 
 	

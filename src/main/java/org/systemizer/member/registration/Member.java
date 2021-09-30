@@ -52,7 +52,7 @@ public class Member
 	}
 
 	public void addAttribute(String string, String string2) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	
