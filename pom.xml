@@ -56,7 +56,7 @@ https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8
   </dependencies>
   
   <build>
-  <finalName>memberreg</finalName>
+  <finalName>register</finalName>
    <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
