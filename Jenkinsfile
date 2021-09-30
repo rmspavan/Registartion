@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent(['sshkey']){
-                    sh "scp -o StrictHostKeyChecking=no webapp/target/register.war root@192.168.1.245:/usr/share/tomcat/webapps/"
+                    sh "scp -o StrictHostKeyChecking=no /target/register.war root@192.168.1.245:/usr/share/tomcat/webapps/"
                   }
                 }
             }       
