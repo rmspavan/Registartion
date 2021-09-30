@@ -9,16 +9,11 @@ pipeline {
                 git branch: 'master', credentialsId: 'git', url: 'https://github.com/rmspavan/Registartion.git'
             }
         }
-   	    stage ('Clean and Install')  {
-	      steps {
-                 sh "mvn clean install"
-              }
-        }
     	stage ('Build')  {
 	      steps {
-                   sh "mvn package"
-              }
-         }
+                   sh "mvn clean install package"
+                }
+        }
         stage('Deploy') {
             steps {
                sshagent(['sshkey']){
