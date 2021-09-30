@@ -6,8 +6,7 @@ pipeline {
     stages {
         stage('scm') {
             steps {
-                git branch: 'main', credentialsId: 'git', 
-                url: 'https://github.com/rmspavan/Registartion.git'
+                git branch: 'main', credentialsId: 'git', url: 'https://github.com/rmspavan/Registartion.git'
             }
         }
         stage('build') {
@@ -18,8 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent(['sshkey']){
-                    sh "scp -o StrictHostKeyChecking=no webapp/target/register.war 
-                    root@192.168.1.245:/usr/share/tomcat/webapps"
+                    sh "scp -o StrictHostKeyChecking=no webapp/target/register.war root@192.168.1.245:/usr/share/tomcat/webapps/"
                   }
                 }
             }       
