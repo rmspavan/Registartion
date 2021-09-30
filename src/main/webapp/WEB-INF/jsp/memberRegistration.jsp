@@ -8,17 +8,28 @@ Registration
 </head>
 <body>
 <table>
+<c:if test="${not empty submissionmsg}">
+<tr>
+<td>
+<c:out value="${submissionmsg}"></c:out>
+</td>
+</tr>
+<tr><td> </td></tr>
+</c:if>
+</table>
+
+<table>
 <form:form action="submission" modelAttribute="memberdetails">
 <tr><td><form:label path="uname">User Name :</form:label></td>
-<td><form:input path="uname"/></td></tr>
+<td><form:input path="uname" maxlength="30"/></td></tr>
 <tr><td><form:label path="password">Password :</form:label></td>
-<td><form:input path="password"/></td></tr>
+<td><form:input path="password" maxlength="30"/></td></tr>
 <tr><td><form:label path="email">Email :</form:label></td>
-<td><form:input path="email"/></td></tr>
+<td><form:input path="email" maxlength="30"/></td></tr>
 <tr><td><form:label path="phone">Phone Number :</form:label></td>
-<td><form:input path="phone"/></td></tr>
-
-<tr><td><form:button value="submit">submit</form:button></td> 
+<td><form:input path="phone" maxlength="10"/></td></tr>
+<tr><td> </td></tr><tr><td> </td></tr>
+<tr><td><form:button value="submit">submit</form:button></td>
 
 <!-- 
 <td><form:button value="list">list</form:button></td></tr>
@@ -28,8 +39,6 @@ Registration
 <form:form action="showList" modelAttribute="memberdetails">
 <tr><td><form:button value="submit">Table List</form:button></td> 
 </form:form>
-
-
 </table>
 <br><br>
 <c:if test="${not empty memlist}">

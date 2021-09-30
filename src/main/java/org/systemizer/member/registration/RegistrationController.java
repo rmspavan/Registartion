@@ -27,13 +27,21 @@ public class RegistrationController
 	 */
 	
 	@PostMapping(value = {"/submission"})
-	public void registerMember(@ModelAttribute("memberdetails") Member member) 
+	public ModelAndView registerMember(@ModelAttribute("memberdetails") Member member) 
 	{
-		registrationRepo.save(member);
-	    @SuppressWarnings("unused")
 		ModelAndView modelView=new ModelAndView("memberRegistration");
+		if(member.getUname().equalsIgnoreCase("")||
+				member.getPassword().equalsIgnoreCase("")||
+				member.getEmail().equalsIgnoreCase("")||
+				member.getPhone().equalsIgnoreCase("")) {
+			modelView.addObject("submissionmsg", "Please enter valid/correct member details");
+		}
+		else {
+		registrationRepo.save(member);
+		modelView.addObject("submissionmsg", "Member Registered Successfully");
+		}
 		 // return modelView.addObject("memlist", registrationRepo.findAll());
-		 
+		 return modelView;
 	}
 	
 
