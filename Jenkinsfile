@@ -15,13 +15,13 @@ pipeline {
                 sh "mvn clean package"
             }
         }
-        stage('Deploy') {
+/*         stage('Deploy') {
             steps {
                 sshagent(['sshkey']){
                     sh "scp -o StrictHostKeyChecking=no webapp/target/register.war 
                     root@192.168.1.245:/usr/share/tomcat/webapps"
                   }
                 }
-            }       
+            }   */     
         }
     }
