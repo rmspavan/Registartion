@@ -8,6 +8,11 @@ Registration
 </head>
 <body>
 <table>
+<tr><td> </td></tr>
+<h1>Participant Registration</h1>
+</table>
+<table>
+<tr><td> </td></tr>
 <c:if test="${not empty submissionmsg}">
 <tr>
 <td>
@@ -17,7 +22,6 @@ Registration
 <tr><td> </td></tr>
 </c:if>
 </table>
-
 <table>
 <form:form action="submission" modelAttribute="memberdetails">
 <tr><td><form:label path="uname">User Name :</form:label></td>
@@ -29,7 +33,9 @@ Registration
 <tr><td><form:label path="phone">Phone Number :</form:label></td>
 <td><form:input path="phone" maxlength="10"/></td></tr>
 <tr><td> </td></tr><tr><td> </td></tr>
+<tr><td> </td></tr><tr><td> </td></tr>
 <tr><td><form:button value="submit">submit</form:button></td>
+
 
 <!-- 
 <td><form:button value="list">list</form:button></td></tr>
@@ -37,7 +43,9 @@ Registration
 </form:form>
 
 <form:form action="showList" modelAttribute="memberdetails">
-<tr><td><form:button value="submit">Table List</form:button></td> 
+<tr><td> </td></tr><tr><td> </td></tr>
+<tr><td> </td></tr><tr><td> </td></tr>
+<tr><td><form:button value="submit">Register List</form:button></td> 
 </form:form>
 </table>
 <br><br>
