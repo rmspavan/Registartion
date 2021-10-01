@@ -45,7 +45,7 @@ Registration
 <form:form action="showList" modelAttribute="memberdetails">
 <tr><td> </td></tr><tr><td> </td></tr>
 <tr><td> </td></tr><tr><td> </td></tr>
-<tr><td><form:button value="submit">Register List</form:button></td> 
+<tr><td><form:button value="submit">Participant List</form:button></td> 
 </form:form>
 </table>
 <br><br>
