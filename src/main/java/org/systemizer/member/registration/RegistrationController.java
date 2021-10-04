@@ -31,7 +31,7 @@ public class RegistrationController
 	{
 		ModelAndView modelView=new ModelAndView("memberRegistration");
 		if(member.getUname().equalsIgnoreCase("")||
-				member.getPassword().equalsIgnoreCase("")||
+		/* member.getPassword().equalsIgnoreCase("")|| */
 				member.getEmail().equalsIgnoreCase("")||
 				member.getPhone().equalsIgnoreCase("")) {
 			modelView.addObject("submissionmsg", "Please enter valid/correct member details");

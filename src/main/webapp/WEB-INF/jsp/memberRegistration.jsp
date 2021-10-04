@@ -26,8 +26,8 @@ Registration
 <form:form action="submission" modelAttribute="memberdetails">
 <tr><td><form:label path="uname">User Name :</form:label></td>
 <td><form:input path="uname" maxlength="30"/></td></tr>
-<tr><td><form:label path="password">Password :</form:label></td>
-<td><form:input path="password" maxlength="30"/></td></tr>
+<%-- <tr><td><form:label path="password">Password :</form:label></td>
+<td><form:input path="password" maxlength="30"/></td></tr> --%>
 <tr><td><form:label path="email">Email :</form:label></td>
 <td><form:input path="email" maxlength="30"/></td></tr>
 <tr><td><form:label path="phone">Phone Number :</form:label></td>
@@ -45,7 +45,7 @@ Registration
 <form:form action="showList" modelAttribute="memberdetails">
 <tr><td> </td></tr><tr><td> </td></tr>
 <tr><td> </td></tr><tr><td> </td></tr>
-<tr><td><form:button value="submit">Participant List</form:button></td> 
+<tr><td><form:button value="submit">Register List</form:button></td> 
 </form:form>
 </table>
 <br><br>
@@ -53,13 +53,13 @@ Registration
 <table border="1">
 <tr>
 <th>User Name</th>
-<th>Password</th>
+<!-- <th>Password</th> -->
 <th>Email</th>
 <th>Phone</th>
 </tr>
 <c:forEach items="${memlist}" var="lists">
 <tr><td>${lists.uname}</td>
-<td>${lists.password}</td>
+<%-- <td>${lists.password}</td> --%>
 <td>${lists.email}</td>
 <td>${lists.phone}</td></tr>    
 </c:forEach>

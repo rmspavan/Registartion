@@ -12,8 +12,9 @@ public class Member
 	@Id
 	@Column(name = "uname")
 	private String uname;
-	@Column(name = "password")
-	private String password; 
+	/*
+	 * @Column(name = "password") private String password;
+	 */
 	@Column(name = "email")
 	private String email; 
 	@Column(name = "phone")
@@ -27,13 +28,11 @@ public class Member
 		this.uname = uname;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	/*
+	 * public String getPassword() { return password; }
+	 * 
+	 * public void setPassword(String password) { this.password = password; }
+	 */
 
 	public String getEmail() {
 		return email;
@@ -52,7 +51,8 @@ public class Member
 	}
 
 	public void addAttribute(String string, String string2) {
-				
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
